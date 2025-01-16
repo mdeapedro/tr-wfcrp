@@ -174,7 +174,11 @@ def transgenetic(
         while move_to_better_trasposon(solution):
             pass
 
-    return population
+    solution = population[0]
+    for individual in population:
+        if individual.cost() < solution.cost():
+            solution = individual
+    return solution
 
 
 def transgenetic_debug(
