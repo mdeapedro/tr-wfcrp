@@ -170,9 +170,9 @@ def transgenetic(
                 host_repository.append(cut_branch(solution, random.choice(list(solution.children_node[0]))))
         count_number_of_generations += 1
 
-    for solution in population:
-        while move_to_better_trasposon(solution):
-            pass
+    # for solution in population:
+    #     while move_to_better_trasposon(solution):
+    #         pass
 
     solution = population[0]
     for individual in population:
